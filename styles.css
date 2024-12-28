@@ -1,0 +1,111 @@
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+
+    --color-brown-800: hsl(14, 45%, 36%);
+
+    --color-rose-800: hsl(332, 51%, 32%);
+    --color-rose-50: hsl(330, 100%, 98%);
+
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-family-young-serif: 'Young Serif', serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Typography */
+
+body {
+    margin: 0;
+    font-family: var(--font-family-outfit);
+}
+
+.recipe__title {
+    color: var(--color-stone-900);
+}
+
+.recipe__subtitle {
+    color: var(--color-brown-800);
+}
+
+.recipe__subtitle, .recipe__title {
+    font-family: var(--font-family-young-serif);
+}
+
+.recipe__time span {
+    color: var(--color-rose-800);
+    font-weight: 700;
+    font-size: larger;
+}
+
+.recipe__description, .recipe__time, .recipe__ingredients-list, .recipe__instructions-list, .recipe__nutrition, .recipe__nutrition-table {
+    color: var(--color-stone-600);
+}
+
+.recipe__value {
+    color: var(--color-brown-800);
+    font-weight: 700;
+} 
+
+.recipe__instructions-list li::marker {
+    color: var(--color-brown-800);
+    font-weight: 700;
+}
+
+/* Image */
+
+.recipe__image {
+    display: block;
+    max-width: 100%;
+}
+
+/* Layout */
+
+.recipe {
+    padding: 30px;
+}
+
+.recipe__time {
+    background-color: var(--color-rose-50);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.recipe__time ul {
+    padding-left: 1rem;
+}
+
+.recipe__time li::marker {
+    color: var(--color-rose-800);
+}
+
+.recipe__ingredients-list, .recipe__instructions-list {
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid var(--color-stone-150);
+}
+
+.recipe__nutrition-table div {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-stone-150);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.recipe__nutrition-table div:last-child {
+    border-bottom: none;
+}
+
+.recipe__instructions-list, .recipe__ingredients-list {
+    padding-left: 1rem;
+}
+
+.recipe__instructions-list li{
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
