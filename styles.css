@@ -105,7 +105,29 @@ body {
     padding-left: 1rem;
 }
 
-.recipe__instructions-list li{
+.recipe__instructions-list li, .recipe__ingredients-list li, .recipe_time li, .recipe__description {
     letter-spacing: 0.5px;
     line-height: 1.5;
+}
+
+.recipe__time li {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    body {
+        background: var(--color-stone-100);
+    }
+
+    .recipe__card {
+        background: var(--color-white);
+        max-width: 768px;
+        margin: 96px auto;
+        border-radius: 16px;
+        padding: 32px;
+    }
+
+    .recipe {
+        padding: 0;
+    }
 }
